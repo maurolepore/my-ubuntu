@@ -296,8 +296,5 @@ pak::pkg_install(c("pkgdown", "spelling"))
 usethis::git_sitrep()
 ```
 
-    * [ ] ~/.Renviron uses correct `GITHUB_PAT`
-    * [ ] ~/.Rprofile uses correct git protocol (https or ssh)
-
---
-
+* [ ] ~/.Renviron uses correct `GITHUB_PAT`
+* [ ] ~/.Rprofile uses correct git protocol (https or ssh)

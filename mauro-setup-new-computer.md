@@ -316,7 +316,5 @@ showed up by `Sys.getenv("R_LIBS_USER")`; weird.)
 
     usethis::git_sitrep()
 
-    * [ ] ~/.Renviron uses correct `GITHUB_PAT`
-    * [ ] ~/.Rprofile uses correct git protocol (https or ssh)
-
-–
+  - [ ] \~/.Renviron uses correct `GITHUB_PAT`
+  - [ ] \~/.Rprofile uses correct git protocol (https or ssh)
