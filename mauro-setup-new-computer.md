@@ -1,4 +1,38 @@
-* [x] [Install ubuntu](https://ubuntu.com/tutorials/tutorial-install-ubuntu-desktop#1-overview), maybe alongside Windows.
+## Ubuntu
+
+* [ ] [Install ubuntu](https://ubuntu.com/tutorials/tutorial-install-ubuntu-desktop#1-overview), maybe alongside Windows. Mminimal seems fine.
+
+* [ ] Ubuntu can restart and boot on Windows
+
+* [ ] Ubuntu can restart and boot on Ubuntu
+
+* [ ] Ubuntu's boot menu (F12 on thinkpad) lists ubuntu first, windows second
+
+* [ ] Setup right-mouse button as main
+
+* [ ] Auto-hide the dock
+
+
+
+## Apps
+
+* [ ] Install Chrome; login and sync personal and work accounts
+
+* [ ] Install Slack;  find workspaces linked to personal and work accounts
+
+* [ ] [Install launchy](https://www.launchy.net/download.php#linux), e.g. launchy_2.5-1_amd64.deb
+
+```
+cd Downloads
+sudo gdebi launchy_2.5-1_amd64.deb
+```
+
+* [ ] In launchy settings, add to catalog ~/git/ with file type *.rproj
+
+
+
+
+
 
 * [x] Ensure user, e.g. mauro, owns ~ (/home/mauro) and all its contents:
 
@@ -217,18 +251,28 @@ pak::pkg_install(c("pkgdown", "spelling"))
 
 --
 
-* [ ] Check or set `GITHUB_PAT`  is set in ~/.Renviron
-
-```
-usethis::github_browse_github_token()
-usethis::browse_github_browse_github_token()
-```
-
-
-
 * [ ] [Setup ssh keys](https://happygitwithr.com/ssh-keys.html)
 
+--
 
-* [ ] Install a launcher to make it easier to launch rstudio projects: https://www.launchy.net/ (add file type *.rproj to catalog)
 
 
+* [] Get a situation report for git
+```
+usethis::git_sitrep()
+```
+
+    * [ ] ~/.Renviron uses correct `GITHUB_PAT`
+    * [ ] ~/.Rprofile uses correct git protocol (https or ssh)
+
+--
+
+
+## Additional apps
+
+* [ ] Install VLC media or similar video player
+* [ ] Install flameshot to capture screen shots
+
+```
+apt install flameshot
+```
