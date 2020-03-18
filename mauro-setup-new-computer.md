@@ -196,8 +196,7 @@ sudo login mauro -f
 which zsh
 ```
 
-
-
+* [ ] Maybe [enable automatic login](https://vitux.com/how-to-enable-disable-automatic-login-in-ubuntu-18-04-lts/)
 
 * [ ] [Install oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh#basic-installation)
 
