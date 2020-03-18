@@ -1,3 +1,7 @@
+---
+output: github_document
+---
+
 ## Ubuntu
 
 * [ ] [Install ubuntu](https://ubuntu.com/tutorials/tutorial-install-ubuntu-desktop#1-overview), maybe alongside Windows. Minimal seems fine.
