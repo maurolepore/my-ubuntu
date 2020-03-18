@@ -169,11 +169,35 @@ sudo apt-get install texlive-full
 
 * [ ] Install curl
 
-* [ ] Install zsh
+* [ ] [Install zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
 
 ```
-sudo apt instsll zsh
+sudo apt install zsh
 ```
+
+* [ ] Make zsh the default login shell for the user, e.g. mauro
+
+```
+# Confirm installation worked
+zsh --version
+which zsh
+
+# Setup .zshrc following promts
+zsh
+
+# Login mauro. -f indicates the user needs no further authentication (password)
+sudo login mauro -f
+
+# Change shell
+chsh -s $(which zsh)
+
+# Logout with ^D, login again and check new shell is zsh
+sudo login mauro -f
+which zsh
+```
+
+
+
 
 * [ ] Install oh-my-zsh
 
