@@ -14,11 +14,11 @@ This is how I build the Ubuntu environment I like.
 
 * [ ] Ubuntu's boot menu (F12 on thinkpad) lists ubuntu first, windows second
 
-Settings:
+Universal Access:
 
 * [ ] Dock > Auto-hide the dock
 
-* [ ] Universal Access > Cursor size: largest
+* [ ] Universal Access > Cursor size: largest; Large Text: ON
 
 Devices:
 
