@@ -294,8 +294,8 @@ should instead be your current R version, e.g. `3.6`):
 `R_LIBS_USER` wasn’t used by `installed.packages()` – even though it
 showed up by `Sys.getenv("R_LIBS_USER")`; weird.)
 
-  - Chapter 9 Set up an R dev environment:
-    <https://rstats.wtf/set-up-an-r-dev-environment.html>
+  - More: [Set up an R dev
+    environment](https://rstats.wtf/set-up-an-r-dev-environment.html)
 
   - [ ] Install packages for development
 
