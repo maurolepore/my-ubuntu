@@ -190,13 +190,13 @@ sudo login mauro -f
 
 # Change shell
 chsh -s $(which zsh)
-
-# Logout with ^D, login again and check new shell is zsh
-sudo login mauro -f
-which zsh
 ```
 
-* [ ] Maybe [enable automatic login](https://vitux.com/how-to-enable-disable-automatic-login-in-ubuntu-18-04-lts/)
+* Logout the user from ubuntu system (press the windows key then type "Log out" or restart the computer).
+
+```
+which zsh
+```
 
 * [ ] [Install oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh#basic-installation)
 
@@ -207,17 +207,15 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 * [ ] Install all the scripts and plugins used by szh
 
 ```
-# [oh-my-zsh] plugin 'zsh-syntax-highlighting' not found
-# https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh
+# [oh-my-zsh] plugin 'zsh-syntax-highlighting'
 cd ~/.oh-my-zsh/plugins/
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-# [oh-my-zsh] plugin 'zsh-autosuggestions' not found
-cd ~/.oh-my-zsh/custom/plugins)
+# [oh-my-zsh] plugin 'zsh-autosuggestions'
+cd ~/.oh-my-zsh/custom/plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
-# [oh-my-zsh] autojump script not found
-# https://github.com/wting/autojump
+# [oh-my-zsh] autojump (https://github.com/wting/autojump)
 cd ~
 git clone git://github.com/wting/autojump.git
 cd autojump
@@ -226,8 +224,13 @@ cd autojump
 #./uninstall.py
 ```
 
+More:
 
-* [ ] Show current branch in the bash terminal prompt: https://www.shellhacks.com/show-git-branch-terminal-command-prompt/
+* [Show current branch in the bash terminal prompt](https://www.shellhacks.com/show-git-branch-terminal-command-prompt/): This may already be in the .zshrc file
+
+--
+
+
 
 * [x] Install tmux
 
@@ -236,9 +239,6 @@ sudo apt install tmux
 ```
 
 --
-
-
-
 
 * [x] Install dotfiles
 
