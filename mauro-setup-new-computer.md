@@ -280,18 +280,14 @@ More:
 
   - [ ] Setup R libraries
 
-  - Setup user libraries by adding the environmental variable
-    `R_LIBS_USER` to a temporary local .Renviron file (for now in your
-    current working directory; you may later add this to a more
-    permanent .Renviron – once you install usethis you can do it with
-    `usethis::edit_r_environ()`). Run `.libPats()` and look for
-    something similar to this (except that `%v` should instead be your
-    current R version, e.g. `3.6`):
+Setup user libraries by adding the environmental variable `R_LIBS_USER`
+to a temporary local .Renviron file (for now in your current working
+directory; you may later add this to a more permanent .Renviron – once
+you install usethis you can do it with `usethis::edit_r_environ()`). Run
+`.libPats()` and look for something similar to this (except that `%v`
+should instead be your current R version, e.g. `3.6`):
 
-<!-- end list -->
-
-    R_LIBS_USER="home/mauro/R/x86_64-pc-linux-gnu-library/%v"
-    # Or
+    # Should expand to R_LIBS_USER="home/mauro/R/x86_64-pc-linux-gnu-library/%v"
     R_LIBS_USER="~/R/%p-library/%v"
 
 (It’s important to get this right. I missed the “-library” bit and
