@@ -217,10 +217,16 @@ pak::pkg_install(c("pkgdown", "spelling"))
 
 --
 
+* [ ] Check or set `GITHUB_PAT`  is set in ~/.Renviron
+
+```
+usethis::github_browse_github_token()
+usethis::browse_github_browse_github_token()
+```
 
 
 
-* [ ] Setup ssh keys https://happygitwithr.com/ssh-keys.html
+* [ ] [Setup ssh keys](https://happygitwithr.com/ssh-keys.html)
 
 
 * [ ] Install a launcher to make it easier to launch rstudio projects: https://www.launchy.net/ (add file type *.rproj to catalog)
