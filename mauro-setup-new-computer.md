@@ -109,6 +109,10 @@ More:
 
   - [ ] Install curl
 
+<!-- end list -->
+
+    sudo apt-get install curl
+
   - [ ] [Install
     zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
 

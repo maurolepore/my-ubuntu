@@ -108,6 +108,10 @@ sudo apt-get install texlive-full
 
 * [ ] Install curl
 
+```
+sudo apt-get install curl
+```
+
 * [ ] [Install zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
 
 ```
