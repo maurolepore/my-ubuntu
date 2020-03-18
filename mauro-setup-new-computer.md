@@ -124,9 +124,54 @@ sudo apt-get install texlive-full
 ```
 
 
+* [ ] Install curl
 
+* [ ] Install zsh
+
+```
+sudo apt instsll zsh
+```
+
+* [ ] Install oh-my-zsh
+
+```
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+* [ ] Install all the scripts and plugins used by szh
+
+```
+# [oh-my-zsh] plugin 'zsh-syntax-highlighting' not found
+# https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh
+cd ~/.oh-my-zsh/plugins/
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# [oh-my-zsh] plugin 'zsh-autosuggestions' not found
+cd ~/.oh-my-zsh/custom/plugins)
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+# [oh-my-zsh] autojump script not found
+# https://github.com/wting/autojump
+cd ~
+git clone git://github.com/wting/autojump.git
+cd autojump
+./install.py
+# or
+#./uninstall.py
+```
+
+
+* [ ] Show current branch in the bash terminal prompt: https://www.shellhacks.com/show-git-branch-terminal-command-prompt/
+
+* [x] Install tmux
+
+```
+sudo apt install tmux
+```
 
 --
+
+
 
 
 * [x] Install dotfiles
@@ -138,6 +183,7 @@ sudo apt-get install texlive-full
 git clone https://github.com/maurolepore/dotfiles
 ```
 
+    * [ ] Temoprarily comment out .Rprofile
 
 
 
@@ -158,11 +204,25 @@ R_LIBS_USER="~/R/%p-library/%v"
 
 * Chapter 9 Set up an R dev environment: https://rstats.wtf/set-up-an-r-dev-environment.html
 
-* Setup ssh keys https://happygitwithr.com/ssh-keys.html
+* [ ] Install packages for development
 
-* Show current branch in the bash terminal prompt: https://www.shellhacks.com/show-git-branch-terminal-command-prompt/
+```
+install.packages("pak")
+pak::pkg_install(c("devtools", "testthat", "roxygen2"))
+pak::pkg_install(c("pkgdown", "spelling"))
+```
 
-* Install a launcher to make it easier to launch rstudio projects: https://www.launchy.net/ (add file type *.rproj to catalog)
+* [ ] Comment back in ~/.Rprofile
+* [ ] Restarting R has no complaint about unavailable packages listed in ~/.Rprofile
 
+--
+
+
+
+
+* [ ] Setup ssh keys https://happygitwithr.com/ssh-keys.html
+
+
+* [ ] Install a launcher to make it easier to launch rstudio projects: https://www.launchy.net/ (add file type *.rproj to catalog)
 
 
