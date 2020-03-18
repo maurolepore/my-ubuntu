@@ -25,28 +25,9 @@ Devices:
 
 
 
-## Installs outside the terminal
+## Tweaks on the terminal
 
-* [ ] Install from Chrome from Firefix; login and sync personal and work accounts
-
-* [ ] Install Slack from Ubuntu software;  find workspaces linked to personal and work accounts
-
-## Installs outside the terminal
-* [ ] [Install launchy](https://www.launchy.net/download.php#linux), e.g. launchy_2.5-1_amd64.deb
-
-```
-cd Downloads
-sudo gdebi launchy_2.5-1_amd64.deb
-```
-
-* [ ] In launchy settings, add to catalog ~/git/ with file type *.rproj
-
-
-
-
-
-
-* [x] Ensure user, e.g. mauro, owns ~ (/home/mauro) and all its contents:
+* [ ] Ensure user, e.g. mauro, owns ~ (/home/mauro) and all its contents:
 
 ```
 chown mauro -R ~
@@ -56,79 +37,40 @@ Now mauro can add ssh keys at ~/.ssh, launch RStudio from a terminal at ~, etc.
 
 More: 
 
-* https://askubuntu.com/questions/633733/gdebi-core-package-is-not-available
-* https://docs.rstudio.com/resources/install-r/
+* <https://askubuntu.com/questions/633733/gdebi-core-package-is-not-available>
+* <https://docs.rstudio.com/resources/install-r/>
 
---
+## Small installs outside the terminal
 
+* [ ] Install from Chrome from Firefix; login and sync personal and work accounts
 
+* [ ] Install Slack from Ubuntu software;  find workspaces linked to personal and work accounts
 
-* [x] Install R
-
-    * Check version of Ubuntu
-
-```
-lsb_release -a
-```
-
-    * [Instructions for Ubuntu 18-04](https://www.digitalocean.com/community/tutorials/how-to-install-r-on-ubuntu-18-04-quickstart) (If you’re not using 18.04, find the relevant repository from the [R Project Ubuntu list](https://cloud.r-project.org/bin/linux/ubuntu/), named for each release.)
-
-```
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
-sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/'
-sudo apt update
-sudo apt install r-base
-```       
-
-More:
-
-* https://docs.rstudio.com/resources/install-r-source/
-* pre-release: https://cran.rstudio.com/src/base-prerelease/
-
---
+* [ ] Install VLC media or similar video player
 
 
+## Small installs from the terminal
 
-* [x] Install RStudio, e.g. rstudio-1.3.911-amd64.deb
+### Linux tools
 
-     * [x] Import [RStudio's public code-signing key](https://rstudio.com/code-signing/)
-
-```
-gpg --keyserver keys.gnupg.net --recv-keys 3F32EE77E331692F
-
-```
-
-    * [x] Install the dpkg-sig package.
+* [ ] Install the dpkg-sig package.
 
 ```
 sudo apt install dpkg-sig
 ```
 
-    * [x] Download [RStudio release](https://rstudio.com/products/rstudio/download/#download) or [RStudio preview](https://rstudio.com/products/rstudio/download/preview/), say rstudio-1.3.911-amd64.deb, then validate the signature.
-
-```
-cd ~/Downloads
-dpkg-sig --verify rstudio-1.3.911-amd64.deb
-```
-
-    * [x] Install gdebi: 
+* [ ] Install gdebi: 
 
 ```
 sudo apt-get update
 sudo apt-get install gdebi-core
 ```
 
-    * [x] Install RStudio
+* [ ] Install flameshot to capture screen shots
 
 ```
-sudo gdebi rstudio-1.3.911-amd64.deb
+apt install flameshot
 ```
-
-More:
-
-* <https://linuxconfig.org/rstudio-on-ubuntu-18-04-bionic-beaver-linux>
-
---
 
 
 
@@ -139,28 +81,19 @@ sudo apt-get update
 sudo apt-get install -y libcurl4-openssl-dev libssl-dev libssh2-1-dev libxml2-dev
 ```
 
-More:
-
-* [Maybe you need more tools?](https://www.r-bloggers.com/installing-our-r-development-environment-on-ubuntu-16-04/)
-
---
-
-
-* [x] Install more terminal tools
-    
-    * [x] Install vim
+* [ ] Install vim
 
 ```
 sudo apt install vim
 ```
 
-    * [x] Install git
+* [ ] Install git
 
 ```
 sudo apt install git
 ```
 
-    * [ ] Install LaTeX
+* [ ] Install LaTeX
 
 Necessary to build pdf manuals for R packages, and to run `devtools::check(remote = TRUE, manual = TRUE)`
 
@@ -168,7 +101,6 @@ Necessary to build pdf manuals for R packages, and to run `devtools::check(remot
 # This is a large installation but a smaller one (texlive-base) didn't work for me
 sudo apt-get install texlive-full
 ```
-
 
 * [ ] Install curl
 
@@ -234,8 +166,7 @@ More:
 --
 
 
-
-* [x] Install tmux
+* [ ] Install tmux
 
 ```
 sudo apt install tmux
@@ -243,21 +174,97 @@ sudo apt install tmux
 
 --
 
-* [x] Install dotfiles
+* [ ] Install dotfiles
 
 
-    * [x] Temporarily dissable 2FA at GitHub <https://github.com/settings/security>
+* [ ] Temporarily dissable 2FA at GitHub <https://github.com/settings/security>
 
 ```
 git clone https://github.com/maurolepore/dotfiles
 ```
 
-    * [ ] Temoprarily comment out .Rprofile
+* [ ] Temoprarily comment out .Rprofile
 
 
 
---
+### Other tools
 
+* [ ] [Install launchy](https://www.launchy.net/download.php#linux), e.g. launchy_2.5-1_amd64.deb. Then open Launcy from windows key, add to catalog ~/git/ with file type *.rproj
+
+```
+cd Downloads
+sudo gdebi launchy_2.5-1_amd64.deb
+```
+
+
+
+## Bigger installs from the termianal
+
+### R
+
+* [x] Install R
+
+    * Check version of Ubuntu
+
+```
+lsb_release -a
+```
+
+* [Instructions for Ubuntu 18-04](https://www.digitalocean.com/community/tutorials/how-to-install-r-on-ubuntu-18-04-quickstart) (If you’re not using 18.04, find the relevant repository from the [R Project Ubuntu list](https://cloud.r-project.org/bin/linux/ubuntu/), named for each release.)
+
+```
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/'
+sudo apt update
+sudo apt install r-base
+```
+
+More:
+
+* https://docs.rstudio.com/resources/install-r-source/
+* pre-release: https://cran.rstudio.com/src/base-prerelease/
+
+
+
+### RStudio
+
+* [] Install RStudio, e.g. rstudio-1.3.911-amd64.deb
+
+* [ ] Import [RStudio's public code-signing key](https://rstudio.com/code-signing/)
+
+```
+gpg --keyserver keys.gnupg.net --recv-keys 3F32EE77E331692F
+
+```
+
+* [x] Download [RStudio release](https://rstudio.com/products/rstudio/download/#download) or [RStudio preview](https://rstudio.com/products/rstudio/download/preview/), say rstudio-1.3.911-amd64.deb, then validate the signature.
+
+```
+cd ~/Downloads
+dpkg-sig --verify rstudio-1.3.911-amd64.deb
+```
+
+* [ ] Install RStudio
+
+```
+sudo gdebi rstudio-1.3.911-amd64.deb
+```
+
+More:
+
+* <https://linuxconfig.org/rstudio-on-ubuntu-18-04-bionic-beaver-linux>
+
+
+
+## Setup ssh keys
+
+* [ ] [Setup ssh keys](https://happygitwithr.com/ssh-keys.html)
+
+* [ ] Enable 2FA on GitHub
+
+
+
+## R setup
 
 * [ ] Setup R libraries
 
@@ -282,17 +289,11 @@ pak::pkg_install(c("pkgdown", "spelling"))
 ```
 
 * [ ] Comment back in ~/.Rprofile
+
 * [ ] Restarting R has no complaint about unavailable packages listed in ~/.Rprofile
 
---
-
-* [ ] [Setup ssh keys](https://happygitwithr.com/ssh-keys.html)
-
---
-
-
-
 * [] Get a situation report for git
+
 ```
 usethis::git_sitrep()
 ```
@@ -302,12 +303,3 @@ usethis::git_sitrep()
 
 --
 
-
-## Additional apps
-
-* [ ] Install VLC media or similar video player
-* [ ] Install flameshot to capture screen shots
-
-```
-apt install flameshot
-```
