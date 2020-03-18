@@ -175,7 +175,7 @@ sudo apt-get install texlive-full
 sudo apt install zsh
 ```
 
-* [ ] Make zsh the default login shell for the user, e.g. mauro
+* [ ] Make zsh the default login shell for the user, e.g. mauro. No need to setup .zshrc if planning to next install oh-my-zsh (adds its own .zshrc).
 
 ```
 # Confirm installation worked
@@ -199,7 +199,7 @@ which zsh
 
 
 
-* [ ] Install oh-my-zsh
+* [ ] [Install oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh#basic-installation)
 
 ```
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
