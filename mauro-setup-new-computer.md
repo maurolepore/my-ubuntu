@@ -19,6 +19,7 @@ Devices:
 * [ ] Mouse & touchpad> Primary button: right
 * [ ] Displays > 
     * Display arrangement: 2-1
+    * Scale: 100%
     * Resolution: Same for both so windows fit the same way in both screens
     * Night Light: on
 
