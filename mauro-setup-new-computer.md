@@ -21,7 +21,9 @@ Settings:
 Devices:
 
   - [ ] Mouse & touchpad\> Primary button: right
+
   - [ ] Displays \>
+    
       - Display arrangement: 2-1
       - Scale: 100%
       - Resolution: Same for both so windows fit the same way in both
@@ -98,12 +100,11 @@ More:
 
     sudo apt install git
 
-  - [ ] Install LaTeX
+  - [ ] Install LaTeX (to build pdf manuals for R packages)
 
-Necessary to build pdf manuals for R packages, and to run
-`devtools::check(remote = TRUE, manual = TRUE)`
+<!-- end list -->
 
-    # This is a large installation but a smaller one (texlive-base) didn't work for me
+    # Big install! The smaller texlive-base didn't work for me
     sudo apt-get install texlive-full
 
   - [ ] Install curl
@@ -135,7 +136,7 @@ Necessary to build pdf manuals for R packages, and to run
     chsh -s $(which zsh)
 
   - Logout the user from ubuntu system (press the windows key then type
-    “Log out” or restart the computer).
+    “Log out” or **restart the computer**).
 
 <!-- end list -->
 
@@ -148,7 +149,7 @@ Necessary to build pdf manuals for R packages, and to run
 
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-  - [ ] Install all the scripts and plugins used by szh
+  - [ ] Install plugins for oh-my-szh
 
 <!-- end list -->
 
@@ -159,7 +160,11 @@ Necessary to build pdf manuals for R packages, and to run
     # [oh-my-zsh] plugin 'zsh-autosuggestions'
     cd ~/.oh-my-zsh/custom/plugins
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-    
+
+  - [ ] Install scripts
+
+<!-- end list -->
+
     # [oh-my-zsh] autojump (https://github.com/wting/autojump)
     cd ~
     git clone git://github.com/wting/autojump.git
@@ -168,13 +173,9 @@ Necessary to build pdf manuals for R packages, and to run
     # or
     #./uninstall.py
 
-More:
-
-  - [Show current branch in the bash terminal
-    prompt](https://www.shellhacks.com/show-git-branch-terminal-command-prompt/):
-    This may already be in the .zshrc file
-
-–
+More: [Show current branch in the bash terminal
+prompt](https://www.shellhacks.com/show-git-branch-terminal-command-prompt/):
+This may already be in the .zshrc file
 
   - [ ] Install tmux
 
@@ -182,12 +183,10 @@ More:
 
     sudo apt install tmux
 
-–
+  - [ ] Install [dotfiles](https://github.com/maurolepore/dotfiles)
 
-  - [ ] Install dotfiles
-
-  - [ ] Temporarily dissable 2FA at GitHub
-    <https://github.com/settings/security>
+  - [ ] May need to temporarly dissable [2FA on
+    GitHub](https://github.com/settings/security)
 
 <!-- end list -->
 
@@ -210,7 +209,7 @@ More:
 
 ### R
 
-  - [x] Install R
+  - [ ] Install R
     
       - Check version of Ubuntu
 
@@ -238,7 +237,7 @@ More:
 
 ### RStudio
 
-  - \[\] Install RStudio, e.g. rstudio-1.3.911-amd64.deb
+  - [ ] Install RStudio, e.g. rstudio-1.3.911-amd64.deb
 
   - [ ] Import [RStudio’s public code-signing
     key](https://rstudio.com/code-signing/)
@@ -247,7 +246,7 @@ More:
 
     gpg --keyserver keys.gnupg.net --recv-keys 3F32EE77E331692F
 
-  - [x] Download [RStudio
+  - [ ] Download [RStudio
     release](https://rstudio.com/products/rstudio/download/#download) or
     [RStudio
     preview](https://rstudio.com/products/rstudio/download/preview/),
@@ -265,14 +264,13 @@ More:
     sudo gdebi rstudio-1.3.911-amd64.deb
 
 More:
-
-  - <https://linuxconfig.org/rstudio-on-ubuntu-18-04-bionic-beaver-linux>
+<https://linuxconfig.org/rstudio-on-ubuntu-18-04-bionic-beaver-linux>
 
 ## Setup ssh keys
 
   - [ ] [Setup ssh keys](https://happygitwithr.com/ssh-keys.html)
 
-  - [ ] Enable 2FA on GitHub
+  - [ ] Enable [2FA on GitHub](https://github.com/settings/security)
 
 ## R setup
 
@@ -312,7 +310,7 @@ showed up by `Sys.getenv("R_LIBS_USER")`; weird.)
   - [ ] Restarting R has no complaint about unavailable packages listed
     in \~/.Rprofile
 
-  - \[\] Get a situation report for git
+  - [ ] Get a situation report for git
 
 <!-- end list -->
 
