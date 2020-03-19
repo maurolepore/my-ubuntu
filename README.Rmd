@@ -350,4 +350,18 @@ newgrp docker
 docker run hello-world
 ```
 
+* [ ] Configure Docker to start on boot
 
+```
+sudo systemctl enable docker
+# disable with 
+# sudo systemctl disable docker
+```
+
+## Trash-cli
+
+* [ ] Install trash
+
+```
+sudo apt-get install trash-cli
+```

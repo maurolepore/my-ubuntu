@@ -22,10 +22,10 @@ Universal Access:
 
 Devices:
 
-  - [ ] Mouse & touchpad\> Primary button: right
-
+  - [ ] Mouse & touchpad\>
+      - Primary button: right
+      - Natural Scrolling: ON
   - [ ] Displays \>
-    
       - Display arrangement: 2-1
       - Scale: 100%
       - Resolution: Same for both so windows fit the same way in both
@@ -141,8 +141,7 @@ More:
     # Change shell
     chsh -s $(which zsh)
 
-  - Logout the user from ubuntu system (press the windows key then type
-    “Log out” or **restart the computer**).
+  - Logout the user from ubuntu system (^alt+del).
 
 <!-- end list -->
 
@@ -321,3 +320,62 @@ showed up by `Sys.getenv("R_LIBS_USER")`; weird.)
 
   - [ ] \~/.Renviron uses correct `GITHUB_PAT`
   - [ ] \~/.Rprofile uses correct git protocol (https or ssh)
+
+## Docker
+
+<https://docs.docker.com/install/linux/docker-ce/ubuntu/>
+
+    # Uninstall old docker versions if any
+    sudo apt-get remove docker docker-engine docker.io containerd runc
+    
+    # Install
+    sudo apt-get update
+    sudo apt-get install \
+        apt-transport-https \
+        ca-certificates \
+        curl \
+        gnupg-agent \
+        software-properties-common
+    
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    
+    # Verify fingerprint
+    sudo apt-key fingerprint 0EBFCD88
+    
+    # Setup stable repository
+    sudo add-apt-repository \
+       "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+       $(lsb_release -cs) \
+       stable"
+    
+    sudo apt-get update
+    sudo apt-get install docker-ce docker-ce-cli containerd.io
+    
+    # Confirm installation
+    sudo docker run hello-world
+
+  - [ ] [Avoid
+    sudo](https://docs.docker.com/install/linux/linux-postinstall/)
+
+<!-- end list -->
+
+    sudo groupadd docker
+    sudo usermod -aG docker $USER
+    newgrp docker
+    docker run hello-world
+
+  - [ ] Configure Docker to start on boot
+
+<!-- end list -->
+
+    sudo systemctl enable docker
+    # disable with 
+    # sudo systemctl disable docker
+
+## Trash-cli
+
+  - [ ] Install trash
+
+<!-- end list -->
+
+    sudo apt-get install trash-cli
