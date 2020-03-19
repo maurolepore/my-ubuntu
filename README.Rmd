@@ -204,7 +204,16 @@ cd Downloads
 sudo gdebi launchy_2.5-1_amd64.deb
 ```
 
+## Trash-cli
 
+* [ ] Install trash
+
+```
+cd ~
+git clone https://github.com/andreafrancia/trash-cli.git
+cd trash-cli
+sudo python setup.py install
+```
 
 ## Bigger installs from the termianal
 
@@ -336,9 +345,6 @@ sudo add-apt-repository \
 
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
-
-# Confirm installation
-sudo docker run hello-world
 ```
 
 * [ ] [Avoid sudo](https://docs.docker.com/install/linux/linux-postinstall/) 
@@ -347,7 +353,9 @@ sudo docker run hello-world
 sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
-docker run hello-world
+
+# Verify
+docker run --rm hello-world
 ```
 
 * [ ] Configure Docker to start on boot
@@ -358,15 +366,5 @@ sudo systemctl enable docker
 # sudo systemctl disable docker
 ```
 
-## Trash-cli
-
-* [ ] Install trash
-
-```
-cd ~
-git clone https://github.com/andreafrancia/trash-cli.git
-cd trash-cli
-sudo python setup.py install
-```
 
 

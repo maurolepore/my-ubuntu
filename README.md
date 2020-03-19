@@ -211,6 +211,17 @@ This may already be in the .zshrc file
     cd Downloads
     sudo gdebi launchy_2.5-1_amd64.deb
 
+## Trash-cli
+
+  - [ ] Install trash
+
+<!-- end list -->
+
+    cd ~
+    git clone https://github.com/andreafrancia/trash-cli.git
+    cd trash-cli
+    sudo python setup.py install
+
 ## Bigger installs from the termianal
 
 ### R
@@ -350,9 +361,6 @@ showed up by `Sys.getenv("R_LIBS_USER")`; weird.)
     
     sudo apt-get update
     sudo apt-get install docker-ce docker-ce-cli containerd.io
-    
-    # Confirm installation
-    sudo docker run hello-world
 
   - [ ] [Avoid
     sudo](https://docs.docker.com/install/linux/linux-postinstall/)
@@ -362,7 +370,9 @@ showed up by `Sys.getenv("R_LIBS_USER")`; weird.)
     sudo groupadd docker
     sudo usermod -aG docker $USER
     newgrp docker
-    docker run hello-world
+    
+    # Verify
+    docker run --rm hello-world
 
   - [ ] Configure Docker to start on boot
 
@@ -371,14 +381,3 @@ showed up by `Sys.getenv("R_LIBS_USER")`; weird.)
     sudo systemctl enable docker
     # disable with 
     # sudo systemctl disable docker
-
-## Trash-cli
-
-  - [ ] Install trash
-
-<!-- end list -->
-
-    cd ~
-    git clone https://github.com/andreafrancia/trash-cli.git
-    cd trash-cli
-    sudo python setup.py install
