@@ -24,7 +24,6 @@ Devices:
 
   - [ ] Mouse & touchpad\>
       - Primary button: right
-      - Natural Scrolling: ON
   - [ ] Displays \>
       - Display arrangement: 2-1
       - Scale: 100%
@@ -49,7 +48,7 @@ More:
   - <https://askubuntu.com/questions/633733/gdebi-core-package-is-not-available>
   - <https://docs.rstudio.com/resources/install-r/>
 
-## Small installs outside the terminal
+## Installs outside the terminal
 
   - [ ] Install from Chrome from Firefix; login and sync personal and
     work accounts
@@ -59,61 +58,63 @@ More:
 
   - [ ] Install VLC media or similar video player
 
-## Small installs from the terminal
+## Nice-to-have installs
 
-### Linux tools
+I do this first because it can improve the experience in all that
+follows.
 
-  - [ ] Install the dpkg-sig package.
+    # Launch files easily (e.g. rstudio projects) <https://www.launchy.net/download.php#linux>
+    # TODO: Add to catalog ~/git/ with file type *.rproj
+    cd Downloads
+    sudo gdebi launchy_2.5-1_amd64.deb
+    
+    # Remove stuff safely to trash -- not forever as rm does
+    cd ~
+    git clone https://github.com/andreafrancia/trash-cli.git
+    cd trash-cli
+    sudo python setup.py install
+    
+    # Capture screen shots
+    sudo apt-get install flameshot
 
-<!-- end list -->
+## Must-have installs
 
-    sudo apt install dpkg-sig
-
-  - [ ] Install gdebi:
+  - [ ] Fundamental tools
 
 <!-- end list -->
 
     sudo apt-get update
+    
+    # To write text anywhere on Unix
+    sudo apt install vim
+    
+    # For version control
+    sudo apt install git
+    
+    # To verify linux-package signatures
+    sudo apt-get install dpkg-sig
+    
+    # To install rstudio, and any software from tarballs
     sudo apt-get install gdebi-core
-
-  - [ ] Install flameshot to capture screen shots
-
-<!-- end list -->
-
-    apt install flameshot
-
-  - [ ] [Install an R development
-    environment](https://www.jimhester.com/post/2017-10-13-docker/)
-
-<!-- end list -->
-
+    
+    # To get stuff from the internet
+    sudo apt-get install curl
+    
+    # For knitr
+    sudo apt-get install pandoc
+    
+    # To install an R development environment <https://www.jimhester.com/post/2017-10-13-docker/>
     sudo apt-get update
     sudo apt-get install -y libcurl4-openssl-dev libssl-dev libssh2-1-dev libxml2-dev
 
-  - [ ] Install vim
+  - [ ] LaTeX to build pdf manuals for R packages
 
-<!-- end list -->
+This is a big install, and takes several minutes. The smaller
+texlive-base didn’t work for me.
 
-    sudo apt install vim
-
-  - [ ] Install git
-
-<!-- end list -->
-
-    sudo apt install git
-
-  - [ ] Install LaTeX (to build pdf manuals for R packages)
-
-<!-- end list -->
-
-    # Big install! The smaller texlive-base didn't work for me
     sudo apt-get install texlive-full
 
-  - [ ] Install curl
-
-<!-- end list -->
-
-    sudo apt-get install curl
+## Improve the terminal
 
   - [ ] [Install
     zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
@@ -121,30 +122,22 @@ More:
 <!-- end list -->
 
     sudo apt install zsh
-
-  - [ ] Make zsh the default login shell for the user, e.g. mauro. No
-    need to setup .zshrc if planning to next install oh-my-zsh (adds its
-    own .zshrc).
-
-<!-- end list -->
-
+    
     # Confirm installation worked
     zsh --version
     which zsh
     
-    # Setup .zshrc following promts
-    zsh
-    
-    # Login mauro. -f indicates the user needs no further authentication (password)
-    sudo login mauro -f
+    # Make zsh the default login shell for the user, e.g. mauro. 
+    # No need to setup .zshrc -- oh-my-zsh will later add .zshrc
     
     # Change shell
     chsh -s $(which zsh)
 
-  - Logout the user from ubuntu system (^alt+del).
+  - [ ] Logout the user from ubuntu system (^alt+del), then login again
 
 <!-- end list -->
 
+    # Confirmed it worked
     which zsh
 
   - [ ] [Install
@@ -182,11 +175,13 @@ More: [Show current branch in the bash terminal
 prompt](https://www.shellhacks.com/show-git-branch-terminal-command-prompt/):
 This may already be in the .zshrc file
 
-  - [ ] Install tmux
+  - [ ] Allow multiple terminal sessions
 
 <!-- end list -->
 
     sudo apt install tmux
+
+## Use my preferred settings
 
   - [ ] Install [dotfiles](https://github.com/maurolepore/dotfiles)
     (based on [jimhester’s](https://github.com/jimhester/dotfiles))
@@ -200,38 +195,13 @@ This may already be in the .zshrc file
 
   - [ ] Temoprarily comment out .Rprofile
 
-### Other tools
-
-  - [ ] [Install launchy](https://www.launchy.net/download.php#linux),
-    e.g. launchy\_2.5-1\_amd64.deb. Then open Launcy from windows key,
-    add to catalog \~/git/ with file type \*.rproj
-
-<!-- end list -->
-
-    cd Downloads
-    sudo gdebi launchy_2.5-1_amd64.deb
-
-## Trash-cli
-
-  - [ ] Install trash
-
-<!-- end list -->
-
-    cd ~
-    git clone https://github.com/andreafrancia/trash-cli.git
-    cd trash-cli
-    sudo python setup.py install
-
-## Bigger installs from the termianal
-
-### R
+## R
 
   - [ ] Install R
-    
-      - Check version of Ubuntu
 
 <!-- end list -->
 
+    # Check version of Ubuntu
     lsb_release -a
 
   - [Instructions for
@@ -252,16 +222,7 @@ More:
   - <https://docs.rstudio.com/resources/install-r-source/>
   - pre-release: <https://cran.rstudio.com/src/base-prerelease/>
 
-### RStudio
-
-  - [ ] Install RStudio, e.g. rstudio-1.3.911-amd64.deb
-
-  - [ ] Import [RStudio’s public code-signing
-    key](https://rstudio.com/code-signing/)
-
-<!-- end list -->
-
-    gpg --keyserver keys.gnupg.net --recv-keys 3F32EE77E331692F
+## RStudio
 
   - [ ] Download [RStudio
     release](https://rstudio.com/products/rstudio/download/#download) or
@@ -271,13 +232,14 @@ More:
 
 <!-- end list -->
 
+    # Import RStudio's public code-signing key <https://rstudio.com/code-signing/>
+    gpg --keyserver keys.gnupg.net --recv-keys 3F32EE77E331692F
+    
+    # Verify signature
     cd ~/Downloads
     dpkg-sig --verify rstudio-1.3.911-amd64.deb
-
-  - [ ] Install RStudio
-
-<!-- end list -->
-
+    
+    # Install RStudio
     sudo gdebi rstudio-1.3.911-amd64.deb
 
 More:
@@ -373,11 +335,11 @@ showed up by `Sys.getenv("R_LIBS_USER")`; weird.)
     
     # Verify
     docker run --rm hello-world
+    
+    # Pull develpment version of R (RD) along side released version of R (R)
+    docker pull rocker/r-devel
 
-  - [ ] Configure Docker to start on boot
+## Install my shell commands
 
-<!-- end list -->
-
-    sudo systemctl enable docker
-    # disable with 
-    # sudo systemctl disable docker
+    cd ~
+    git clone git@github.com:maurolepore/bin.git
