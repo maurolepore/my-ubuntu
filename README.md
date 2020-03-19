@@ -190,6 +190,7 @@ This may already be in the .zshrc file
     sudo apt install tmux
 
   - [ ] Install [dotfiles](https://github.com/maurolepore/dotfiles)
+    (based on [jimhester’s](https://github.com/jimhester/dotfiles))
 
   - [ ] May need to temporarly dissable [2FA on
     GitHub](https://github.com/settings/security)
