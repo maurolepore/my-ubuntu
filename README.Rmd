@@ -24,7 +24,6 @@ Devices:
 
 * [ ] Mouse & touchpad> 
     * Primary button: right
-    * Natural Scrolling: ON
 
 * [ ] Displays > 
     * Display arrangement: 2-1
