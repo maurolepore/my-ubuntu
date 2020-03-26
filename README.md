@@ -89,7 +89,8 @@ follows.
     sudo apt install vim
     
     # For version control
-    sudo apt install git
+    sudo apt-get install git
+    sudo apt-get install gitk
     
     # To verify linux-package signatures
     sudo apt-get install dpkg-sig
@@ -193,8 +194,6 @@ This may already be in the .zshrc file
 
     git clone https://github.com/maurolepore/dotfiles
 
-  - [ ] Temoprarily comment out .Rprofile
-
 ## R
 
   - [ ] Install R
@@ -276,11 +275,24 @@ showed up by `Sys.getenv("R_LIBS_USER")`; weird.)
 
 <!-- end list -->
 
+    # Start R from a toy project with an empty .Rprofile (which calls unavailable packages)
+    mkdir toy
+    cd toy
+    touch .Rprofile
+    
+    # Launch R
+    R
+    
+    # Confirm the libraries are correct
+    Sys.getenv("R_LIBS_USER")
+    
+    # Confirm repository
+    options("repos")
+    
+    # Install packages called in .Renviron
     install.packages("pak")
     pak::pkg_install(c("devtools", "testthat", "roxygen2"))
     pak::pkg_install(c("pkgdown", "spelling"))
-
-  - [ ] Comment back in \~/.Rprofile
 
   - [ ] Restarting R has no complaint about unavailable packages listed
     in \~/.Rprofile
